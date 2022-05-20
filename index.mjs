@@ -34,6 +34,8 @@ drawCardBtn.addEventListener("click", () => {
             if (data.remaining <= 0) {
                 drawCardBtn.disabled = true
                 drawCardBtn.style.cursor = "not-allowed"
+                newDeckBtn.innerHTML = `Another game? `
+                newDeckBtn.addEventListener('click', () => { location.reload() })
                 if (wins1 > wins2) {
                     header.innerText = "COMPUTER WON THE WAR!"
                 } else if (wins1 < wins2) {
